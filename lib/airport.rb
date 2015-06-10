@@ -6,8 +6,8 @@ class Airport
   end
 
   def weather(cheat = nil)
-    value = (!cheat.nil? ? cheat : rand(10))
-    @weather = (value > 2 ? 'sunny' : 'stormy')
+    random = (rand(10) > 2 ? 'sunny' : 'stormy')
+    @weather = (!cheat.nil? ? cheat : random)
   end
 
   def land(plane)
