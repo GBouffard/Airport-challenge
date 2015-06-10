@@ -1,7 +1,7 @@
 require 'plane'
 
 describe Plane do
-  plane = Plane.new
+  let(:plane) { Plane.new }
   it 'has a flying status when created' do
     expect(plane.status).to eq('flying')
   end
@@ -17,7 +17,9 @@ describe Plane do
     expect(plane.status).to eq('flying')
   end
 
-  xit 'cannot land a second time if it has already landed' do
+  it 'cannot land a second time if it has already landed' do
+    plane.land
+    expect { plane.land } .to raise_error('plane already landed')
   end
 
   xit 'cannot fly a second time if it is already flying' do

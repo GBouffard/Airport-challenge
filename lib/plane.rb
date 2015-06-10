@@ -5,7 +5,7 @@ class Plane
   end
 
   def land
-    @status = 'landed'
+    @status == 'landed' ? (fail 'plane already landed') : @status = 'landed'
   end
 
   def take_off
