@@ -22,7 +22,11 @@ class Airport
   end
 
   def take_off(plane)
-  	plane.take_off
-    @planes.delete(plane)
+    if @weather == 'sunny'
+      plane.take_off
+      @planes.delete(plane)
+    else
+      fail 'Authorisation denied. Its Stormy!'
+    end
   end
 end
