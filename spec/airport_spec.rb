@@ -42,4 +42,13 @@ describe Airport do
     (airport.capacity).times { airport.land(plane) }
     expect { airport.land(plane) }.to raise_error 'Authorisation denied. The airport is full!'
   end
+
+  it 'allows a plane to take off' do
+    airport.weather(9)
+    allow(plane).to receive(:land)
+    airport.land(plane)
+    allow(plane).to receive(:take_off)
+    airport.take_off(plane)
+    expect(airport.planes).to eq []
+  end
 end

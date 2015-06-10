@@ -20,4 +20,9 @@ class Airport
       fail 'Authorisation denied. Its Stormy!'
     end
   end
+
+  def take_off(plane)
+  	plane.take_off
+    @planes.delete(plane)
+  end
 end
