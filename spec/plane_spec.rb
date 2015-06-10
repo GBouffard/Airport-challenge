@@ -7,11 +7,14 @@ describe Plane do
   end
 
   it 'can land' do
-    plane.take_off
+    plane.land
     expect(plane.status).to eq('landed')
   end
 
-  xit 'can fly again when landed' do
+  it 'can fly again when landed' do
+    plane.land
+    plane.take_off
+    expect(plane.status).to eq('flying')
   end
 
   xit 'cannot land a second time if it has already landed' do
