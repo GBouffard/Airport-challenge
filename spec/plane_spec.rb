@@ -6,7 +6,9 @@ describe Plane do
     expect(plane.status).to eq('flying')
   end
 
-  xit 'can land' do
+  it 'can land' do
+    plane.take_off
+    expect(plane.status).to eq('landed')
   end
 
   xit 'can fly again when landed' do
