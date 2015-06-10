@@ -1,7 +1,9 @@
 require 'plane'
 
 describe Plane do
-  xit 'has a flying status when created' do
+  plane = Plane.new
+  it 'has a flying status when created' do
+    expect(plane.status).to eq('flying')
   end
 
   xit 'can land' do
