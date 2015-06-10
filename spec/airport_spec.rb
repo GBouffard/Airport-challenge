@@ -4,7 +4,7 @@ describe Airport do
   let(:airport) { Airport.new }
   let(:plane) { double :plane }
   before do
-    airport.weather(9)
+    airport.weather('sunny')
     allow(plane).to receive(:land)
     allow(plane).to receive(:take_off)
   end
@@ -28,7 +28,7 @@ describe Airport do
   end
 
   it 'does not allow a plane to land if the weather is stormy' do
-    airport.weather(1)
+    airport.weather('stormy')
     expect { airport.land(plane) } .to raise_error 'Authorisation denied. Its Stormy!'
   end
 
@@ -50,7 +50,7 @@ describe Airport do
 
   it 'does not allow a plane to take off if the weather is stormy' do
     airport.land(plane)
-    airport.weather(1)
+    airport.weather('stormy')
     expect { airport.take_off(plane) }.to raise_error 'Authorisation denied. Its Stormy!'
   end
 
