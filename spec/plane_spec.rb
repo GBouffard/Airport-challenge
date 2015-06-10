@@ -19,9 +19,10 @@ describe Plane do
 
   it 'cannot land a second time if it has already landed' do
     plane.land
-    expect { plane.land } .to raise_error('plane already landed')
+    expect { plane.land } .to raise_error('plane already landed Genius!')
   end
 
-  xit 'cannot fly a second time if it is already flying' do
+  it 'cannot take off if it is already flying' do
+    expect { plane.take_off } .to raise_error('plane already flying Einstein!')
   end
 end
