@@ -29,7 +29,11 @@ describe Airport do
     expect { airport.land(plane) } .to raise_error 'Authorisation denied. Its Stormy!'
   end
 
-  xit 'allow a plane to land if it is not full' do
+  it 'allows a plane to land if it is not full' do
+    airport.weather(9)
+    allow(plane).to receive(:land)
+    (airport.capacity - 1).times { airport.land(plane) }
+    expect { airport.land(plane) }.not_to raise_error
   end
 
   xit 'does not allow a plane to land if it is full' do
