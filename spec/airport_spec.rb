@@ -2,6 +2,7 @@ require 'airport'
 
 describe Airport do
   let(:airport) { Airport.new }
+  let(:plane) { double :plane }
   it 'has a default capacity' do
     expect(airport.capacity).to eq(50)
   end
@@ -11,11 +12,14 @@ describe Airport do
     expect(heathrow.capacity).to eq(200)
   end
 
-  it 'has a control tower that knows if the weather is sunny or stormy' do
+  it 'control tower knows if the weather is sunny or stormy' do
     expect(airport.weather).to satisfy { 'sunny' || 'stormy' }
   end
 
-  xit 'allow a plane to land if the weather is sunny' do
+  it 'can allow a plane to land' do
+    expect(plane).to receive(:land)
+    airport.land(plane)
+    expect(airport.planes).to eq [plane]
   end
 
   xit 'does not allow a plane if the weather is stormy' do
