@@ -53,4 +53,8 @@ describe Airport do
     airport.weather(1)
     expect { airport.take_off(plane) }.to raise_error 'Authorisation denied. Its Stormy!'
   end
+
+  it 'cannot allow a place to take off if it never landed in the airport' do
+    expect { airport.take_off(plane) }.to raise_error 'This plane is not in this airport!'
+  end
 end

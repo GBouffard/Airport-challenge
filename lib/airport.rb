@@ -22,9 +22,11 @@ class Airport
   end
 
   def take_off(plane)
-    if @weather == 'sunny'
+    if @weather == 'sunny' && @planes.include?(plane)
       plane.take_off
       @planes.delete(plane)
+    elsif @weather == 'sunny'
+      fail 'This plane is not in this airport!'
     else
       fail 'Authorisation denied. Its Stormy!'
     end
