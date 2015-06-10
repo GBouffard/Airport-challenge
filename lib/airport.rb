@@ -11,9 +11,11 @@ class Airport
   end
 
   def land(plane)
-    if @weather == 'sunny'
+    if @weather == 'sunny' && @planes.length < @capacity
       plane.land
       @planes << plane
+    elsif @capacity <= @planes.length
+      fail 'Authorisation denied. The airport is full!'
     else
       fail 'Authorisation denied. Its Stormy!'
     end
