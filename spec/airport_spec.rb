@@ -6,7 +6,9 @@ describe Airport do
     expect(airport.capacity).to eq(50)
   end
 
-  xit 'can have a custom capacity' do
+  it 'can have a custom capacity' do
+    heathrow = Airport.new(200)
+    expect(heathrow.capacity).to eq(200)
   end
 
   xit 'has a control tower that knows if the weather is sunny or stormy' do
