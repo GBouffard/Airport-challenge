@@ -17,12 +17,16 @@ describe Airport do
   end
 
   it 'can allow a plane to land' do
+    airport.weather(9)
     expect(plane).to receive(:land)
     airport.land(plane)
     expect(airport.planes).to eq [plane]
   end
 
-  xit 'does not allow a plane if the weather is stormy' do
+  it 'does not allow a plane to land if the weather is stormy' do
+    airport.weather(1)
+    allow(plane).to receive(:land)
+    expect { airport.land(plane) } .to raise_error 'Authorisation denied. Its Stormy!'
   end
 
   xit 'allow a plane to land if it is not full' do
