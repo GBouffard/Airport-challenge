@@ -1,7 +1,12 @@
 require 'airport'
 
 describe Airport do
-  xit 'has a capacity' do
+  airport = Airport.new
+  it 'has a default capacity' do
+    expect(airport.capacity).to eq(50)
+  end
+
+  xit 'can have a custom capacity' do
   end
 
   xit 'has a control tower that knows if the weather is sunny or stormy' do
