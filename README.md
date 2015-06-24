@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/GBouffard/Airport-challenge.svg?branch=master)](https://travis-ci.org/GBouffard/Airport-challenge)
+[![Build Status](https://travis-ci.org/GBouffard/Airport-challenge.svg?branch=master)](https://travis-ci.org/GBouffard/Airport-challenge) [![Coverage Status](https://coveralls.io/repos/GBouffard/Airport-challenge/badge.svg?branch=master)](https://coveralls.io/r/GBouffard/Airport-challenge?branch=master)
 
 :airplane: Airport-Challenge :airplane:
 ===========
