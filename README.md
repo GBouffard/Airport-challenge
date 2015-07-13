@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/GBouffard/Airport-challenge.svg?branch=master)](https://travis-ci.org/GBouffard/Airport-challenge) [![Coverage Status](https://coveralls.io/repos/GBouffard/Airport-challenge/badge.svg?branch=master)](https://coveralls.io/r/GBouffard/Airport-challenge?branch=master)
+[![Build Status](https://travis-ci.org/GBouffard/Airport-challenge.svg?branch=master)](https://travis-ci.org/GBouffard/Airport-challenge) [![Coverage Status](https://coveralls.io/repos/GBouffard/Airport-challenge/badge.svg?branch=master)](https://coveralls.io/r/GBouffard/Airport-challenge?branch=master)[![Code Climate](https://codeclimate.com/repos/55a3d554e30ba0481b001fa7/badges/329f2eefa9a12a3d7925/gpa.svg)](https://codeclimate.com/repos/55a3d554e30ba0481b001fa7/feed)
 
 :airplane: Airport-Challenge :airplane:
 ===========
